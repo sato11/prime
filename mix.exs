@@ -12,7 +12,7 @@ defmodule Prime.MixProject do
       description: @description,
       elixir: "~> 1.13",
       source_url: @source_url,
-      packages: packages()
+      package: package()
     ]
   end
 
@@ -22,7 +22,7 @@ defmodule Prime.MixProject do
     ]
   end
 
-  defp packages() do
+  defp package() do
     [
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url}
