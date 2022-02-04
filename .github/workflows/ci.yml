@@ -1,0 +1,27 @@
+name: Elixir CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    name: Build and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: erlef/setup-beam@988e02bfe678367a02564f65ca2e37726dc0268f
+        with:
+          elixir-version: '1.13.0'
+          otp-version: '24.1'
+
+      - run: mix format --check-formatted
+
+      - run: mix compile --warning-as-errors
+
+      - run: mix test
