@@ -25,7 +25,7 @@ defmodule Prime.MixProject do
 
   def deps do
     [
-      {:ex_doc, "~> 0.27", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false}
     ]
   end
 
