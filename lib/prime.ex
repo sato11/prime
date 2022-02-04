@@ -11,16 +11,15 @@ defmodule Prime do
   returns a prime.
 
   [Prime number theorem](https://en.wikipedia.org/wiki/Prime_number_theorem)
-  asserts that the distribution of the number of prime numbers
-  between 1 and n is approximately `n/ln(n)`. Therefore we can assume
-  the probability for the randomly chosen number between 1 and n
-  to be the prime number is `1/ln(n)`.
+  asserts that there are approximately `n/ln(n)` prime numbers between
+  1 and n. Therefore we can assume the probability for the randomly chosen
+  number between 1 and n to be the prime number is `1/ln(n)`.
 
-  `ln(2^128)` approximately equals to 89. This means you only need
-  less than 100 attempts to find a prime number between 1 and 2^128.
-  That's why it's just ok to make a loop. Note, however, that
-  the probablistic nature again reside in the `test/1`, hence there is
-  actually a little more than `1/ln(n)` steps to generate a prime.
+  `ln(2^128)` approximately equals to 89. This means you'll only need
+  less than 100 attempts to find a prime number between 1 and `2^128`.
+  That's why it's just ok to make a recursion with no apparent base case.
+  Note, however, that the probablistic nature again reside in the `test/1`,
+  hence there is actually a little more than `1/ln(n)` steps to generate a prime.
   See the doc of `Prime.Fermat.test/1` for details.
   """
 
