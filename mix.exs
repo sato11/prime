@@ -12,6 +12,7 @@ defmodule Prime.MixProject do
       description: @description,
       elixir: "~> 1.13",
       source_url: @source_url,
+      deps: deps(),
       package: package()
     ]
   end
@@ -19,6 +20,12 @@ defmodule Prime.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  def deps do
+    [
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false},
     ]
   end
 
