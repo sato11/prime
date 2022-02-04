@@ -20,6 +20,14 @@ jobs:
           elixir-version: '1.13.0'
           otp-version: '24.1'
 
+      - uses: actions/cache@v2
+        with:
+          path: deps
+          key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+          restore-keys: ${{ runner.os }}-mix-
+
+      - run: mix deps.get
+
       - run: mix format --check-formatted
 
       - run: mix compile --warning-as-errors
