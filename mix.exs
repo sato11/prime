@@ -11,13 +11,21 @@ defmodule Prime.MixProject do
       version: @version,
       description: @description,
       elixir: "~> 1.13",
-      source_url: @source_url
+      source_url: @source_url,
+      packages: packages()
     ]
   end
 
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp packages() do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => @source_url}
     ]
   end
 end
