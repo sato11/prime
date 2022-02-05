@@ -18,7 +18,7 @@ end
 Two functions: `generate/1` and `test/1`. `generate/1` takes the bit size.
 
 ```elixir
-Prime.generate(2)   # 3
+Prime.generate(2)   # 3, or 2
 Prime.generate(8)   # 233, for example
 Prime.generate(32)  # 2152342891, zum Beispiel
 Prime.generate(512) # s'il vous plaît.
