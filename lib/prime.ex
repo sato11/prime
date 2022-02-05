@@ -20,7 +20,7 @@ defmodule Prime do
   That's why it's just ok to make a recursion with no apparent base case.
   Note, however, that the probablistic nature again reside in the `test/1`,
   hence there is actually a little more than `1/ln(n)` steps to generate a prime.
-  See the doc of `Prime.Fermat.test/1` for details.
+  See the doc of `Prime.Fermat` for details.
   """
 
   alias Prime.MillerRabin
